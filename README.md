@@ -26,6 +26,9 @@ Then run the following
 TODO
 ====
 
-- [ ] Move jquery to local
-- [ ] Move angular to local
-
+- [ ] Design & Implement 'Work' state
+- [ ] Design & Implement 'Rest' state
+- [ ] Update controller to switch between & tests
+- [ ] Create a timer to controll the states & tests
+- [ ] Call http://www.timeapi.org/utc/now.json to determine start time & test
+- [ ] Fall back to local time is timeapi fails & test
