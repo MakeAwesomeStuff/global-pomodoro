@@ -7,7 +7,7 @@ angular.module('globalPomodoroApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'pomodoroCtrl'
       })
       .otherwise({
         redirectTo: '/'

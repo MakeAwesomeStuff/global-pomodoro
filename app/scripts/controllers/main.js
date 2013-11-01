@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('globalPomodoroApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('pomodoroCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
