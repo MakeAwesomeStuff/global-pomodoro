@@ -25,6 +25,6 @@ Then run the following
 
 TODO
 ====
-[ ] Move jquery to local
-[ ] Move angular to local
+- [ ] Move jquery to local
+- [ ] Move angular to local
 
