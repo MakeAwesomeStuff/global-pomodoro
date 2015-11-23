@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
-  render() {
-    return (
-      <h1>Hello, world.</h1>
-    );
-  }
-}
+import 'babel-core/polyfill'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import App from './containers/App'
+import configureStore from './store/configureStore'
+import 'todomvc-app-css/index.css'
+
+const store = configureStore()
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
