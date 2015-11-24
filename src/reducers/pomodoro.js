@@ -6,7 +6,6 @@ const initialState =
     activity: 'Work'
   }
 
-
 export default function pomodoro(state = initialState, action) {
   switch (action.type) {
     case TICK:

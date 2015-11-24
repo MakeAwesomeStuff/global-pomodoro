@@ -2,14 +2,13 @@ import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Pomodoro from '../components/Pomodoro'
-import * as PomodorosActions from '../actions/pomodoros'
+import * as PomodoroActions from '../actions/pomodoro'
 
 class App extends Component {
   render() {
     const { actions, pomodoro } = this.props
     return (
       <div>
-        <h1>Global Pomodoros</h1>
         <Pomodoro
           actions={actions}
           num={pomodoro.num}
@@ -32,7 +31,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(PomodorosActions, dispatch)
+    actions: bindActionCreators(PomodoroActions, dispatch)
   }
 }
 
