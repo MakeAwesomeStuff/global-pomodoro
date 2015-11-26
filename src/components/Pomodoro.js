@@ -2,20 +2,30 @@ import React, { Component, PropTypes } from 'react'
 
 class Pomodoro extends Component {
 
+  componentDidMount() {
+    this.intervalId = setInterval(
+      () => this.props.actions.tick(Date.now()),
+      1000
+    )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId)
+  }
+
   render() {
-    const { num, activity } = this.props
+    const { activity, activityMinutes } = this.props
     return (
       <div>
-        <h2>Number #{num}</h2>
-        <p>Activity: <strong>{activity}</strong></p>
+        <h1>{activity} for {Math.floor(activityMinutes)} minutes</h1>
       </div>
     )
   }
 }
 
 Pomodoro.propTypes = {
-  num: PropTypes.number.isRequired,
   activity: PropTypes.string.isRequired,
+  activityMinutes: PropTypes.number.isRequired
 }
 
 export default Pomodoro

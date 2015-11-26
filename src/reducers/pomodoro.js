@@ -1,18 +1,17 @@
 import { TICK } from '../constants/ActionTypes'
+import { WORK } from '../constants/ActivityTypes'
 
 const initialState =
   {
-    num: 1,
-    activity: 'Work'
+    activity: WORK,
+    activityMinutes: 0
   }
 
 export default function pomodoro(state = initialState, action) {
+
   switch (action.type) {
     case TICK:
-      return {
-        num: 2,
-        activity: 'Rest'
-      }
+      return action.payload
 
     default:
       return state

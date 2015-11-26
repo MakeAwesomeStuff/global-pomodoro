@@ -11,8 +11,8 @@ class App extends Component {
       <div>
         <Pomodoro
           actions={actions}
-          num={pomodoro.num}
-          activity={pomodoro.activity}/>
+          activity={pomodoro.activity}
+          activityMinutes={pomodoro.activityMinutes}/>
       </div>
     )
   }
